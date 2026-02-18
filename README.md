@@ -24,7 +24,7 @@ L’objectif est de comprendre la structure des données, d’identifier les val
 
 ### Analyse des valeurs manquantes
 
-![Pourcentage de valeurs manquantes par colonne](images\pourcentage_de_valeurs_manquantes_par_colonne.png)
+![Pourcentage de valeurs manquantes par colonne](images/pourcentage_de_valeurs_manquantes_par_colonne.png)
 
 L’analyse des données montre que **trois colonnes contiennent des valeurs manquantes** : **Age**, **Embarked** et **Cabin**.  
 La colonne *Age* comporte environ **19,9 %** de valeurs manquantes, tandis que *Embarked* en contient très peu (**0,2 %**). En revanche, la colonne *Cabin* présente un taux très élevé de valeurs manquantes (**77,1 %**).
@@ -41,13 +41,13 @@ Pour les colonnes *Age* et *Embarked*, des méthodes d’imputation ont été ap
 
 #### Distribution de l’âge et du prix des billets
 
-![Distribution de l’âge des passagers](images\distribution_des_ages_et_des_prix.png)
+![Distribution de l’âge des passagers](images/distribution_des_ages_et_des_prix.png)
 
 La distribution de l’âge des passagers est **quasi symétrique**. Cela s’explique par le fait que la **moyenne (≈ 29,7 ans)** et la **médiane (≈ 28 ans)** sont très proches, ce qui indique une répartition relativement équilibrée autour de la valeur centrale.
 
 En revanche, la distribution du **prix des billets (Fare)** est **asymétrique à gauche**. La majorité des passagers a payé un prix relativement faible, tandis que quelques billets très chers étirent la distribution.
 
-![Distribution du prix des billets](images\distrubition_asymetrique_billet.png)
+![Distribution du prix des billets](images/distrubition_asymetrique_billet.png)
 
 ---
 
@@ -55,7 +55,7 @@ En revanche, la distribution du **prix des billets (Fare)** est **asymétrique �
 
 Oui, la colonne **Fare** contient des **valeurs aberrantes**.
 
-![Boxplot du prix des billets](images\BoxPlot_Fare.png)
+![Boxplot du prix des billets](images/BoxPlot_Fare.png)
 
 Sur le boxplot, les valeurs aberrantes correspondent aux **points situés au-delà de la borne supérieure**, définie par la formule :
 
@@ -67,7 +67,7 @@ Ces valeurs représentent des billets **anormalement chers**, principalement ass
 
 #### Classe la plus représentée dans le dataset
 
-![Répartition des passagers selon la classe](images\repartition_des_passager_selon_la_classe.png)
+![Répartition des passagers selon la classe](images/repartition_des_passager_selon_la_classe.png)
 
 La **classe 3** est la plus représentée dans le dataset. Cela indique que la majorité des passagers du Titanic voyageait en **troisième classe**, ce qui est cohérent avec le contexte historique du transport maritime de l’époque.
 
@@ -75,7 +75,7 @@ La **classe 3** est la plus représentée dans le dataset. Cela indique que la m
 
 #### Visualisation des variables catégorielles (Bonus)
 
-![Distribution des passagers par sexe, port d’embarquement et classe](images\pie_charts_comparative_sex_embarquement_class.png)
+![Distribution des passagers par sexe, port d’embarquement et classe](images/pie_charts_comparative_sex_embarquement_class.png)
 
 Les diagrammes circulaires permettent de visualiser rapidement la **répartition des passagers selon le sexe, le port d’embarquement et la classe**.  
 Ce type de graphique est particulièrement efficace pour comparer des **proportions** et offre une lecture intuitive de la composition du dataset.
@@ -92,7 +92,7 @@ Pour la variable **Age**, trois méthodes d’imputation ont été testées afin
 
 L’objectif est de comparer l’impact de ces méthodes sur la distribution de l’âge des passagers.
 
-![Comparaison des distributions de l’âge selon les méthodes d’imputation](images\box_plot_comparative_age_avant_et_apres_imutation.png)
+![Comparaison des distributions de l’âge selon les méthodes d’imputation](images/box_plot_comparative_age_avant_et_apres_imutation.png)
 
 À partir de cette comparaison, on observe que l’imputation par la **médiane** est celle qui préserve le mieux la distribution originale de l’âge. Les positions des quartiles et la médiane restent proches de celles observées avant imputation.
 
@@ -107,11 +107,11 @@ En revanche, l’imputation par le **mode** affecte fortement la médiane de la 
 Pour la variable **Embarked**, la valeur **modale** est le port **S (Southampton)**.  
 Les valeurs manquantes ont donc été imputées par **S**, qui est la modalité la plus fréquente.
 
-![Distribution des ports d’embarquement avant et après imputation](images\embarquement_avant_et_apres.png)
+![Distribution des ports d’embarquement avant et après imputation](images/embarquement_avant_et_apres.png)
 
 La comparaison des diagrammes en barres avant et après imputation montre que cette opération n’a que très peu modifié la distribution globale, car le nombre de valeurs manquantes était faible.
 
-![Distribution des ports d’embarquement avant et après imputation (diagrammes circulaires)](images\embarquement_apres_et_avant_immutation_pie.png)
+![Distribution des ports d’embarquement avant et après imputation (diagrammes circulaires)](images/embarquement_apres_et_avant_immutation_pie.png)
 
 Les diagrammes circulaires confirment cette observation : les proportions des ports d’embarquement restent quasiment identiques après imputation. L’imputation par la valeur modale est donc une approche adaptée pour cette variable catégorielle.
 
